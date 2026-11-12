@@ -1,3 +1,11 @@
 title: Taybah
-description: Taybah — изучение арабского языка по Мединскому курсу
+description: Taybah — изучение арабского языка по Мединскому курсу на русском. 88 уроков, более 1 500 слов, правила и повторение.
 lang: ru
+plugins:
+  - jekyll-seo-tag
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+      image: /assets/icon-180.jpg
