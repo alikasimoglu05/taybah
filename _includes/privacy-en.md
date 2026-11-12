@@ -1,4 +1,4 @@
-# Taybah Privacy Policy (English)
+# Privacy Policy
 
 _Last updated: 12 November 2026_
 
