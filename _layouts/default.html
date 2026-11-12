@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ru" data-lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>(function(){var l='ru';try{l=localStorage.getItem('taybah-lang')||((navigator.language||'').slice(0,2)==='en'?'en':'ru')}catch(e){}document.documentElement.setAttribute('data-lang',l);document.documentElement.lang=l})();</script>
+{% seo %}
+<meta name="theme-color" content="#EFE8D8" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#1C1513" media="(prefers-color-scheme: dark)">
+<link rel="icon" type="image/png" href="{{ '/assets/favicon.png' | relative_url }}">
+<link rel="apple-touch-icon" href="{{ '/assets/icon-180.jpg' | relative_url }}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Amiri:wght@700&display=swap">
+<link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}">
+</head>
+<body>
+<header class="top">
+  <div class="wrap top-in">
+    <a class="brand" href="{{ '/' | relative_url }}" aria-label="Taybah">
+      <img src="{{ '/assets/icon-180.jpg' | relative_url }}" alt="" width="40" height="40">
+      <span class="wm">taybah</span><span class="wm-ar" lang="ar">طيبة</span>
+    </a>
+    <div class="lang" role="group" aria-label="Язык / Language">
+      <span class="thumb" aria-hidden="true"></span>
+      <button type="button" data-set="ru">RU</button>
+      <button type="button" data-set="en">EN</button>
+    </div>
+  </div>
+</header>
+<main class="wrap">
+{{ content }}
+</main>
+<footer class="foot">
+  <div class="wrap foot-in">
+    <nav>
+      <a href="{{ '/privacy/' | relative_url }}"><span class="l-ru">Конфиденциальность</span><span class="l-en">Privacy</span></a>
+      <a href="{{ '/support/' | relative_url }}"><span class="l-ru">Поддержка</span><span class="l-en">Support</span></a>
+      <a href="mailto:alikasimoglu05@icloud.com">alikasimoglu05@icloud.com</a>
+    </nav>
+    <p>© 2026 Taybah</p>
+  </div>
+</footer>
+<script>
+(function(){
+  var root=document.documentElement,btns=document.querySelectorAll('[data-set]');
+  function apply(l){root.setAttribute('data-lang',l);root.lang=l;btns.forEach(function(b){b.setAttribute('aria-pressed',b.getAttribute('data-set')===l)})}
+  apply(root.getAttribute('data-lang'));
+  btns.forEach(function(b){b.addEventListener('click',function(){var l=b.getAttribute('data-set');apply(l);try{localStorage.setItem('taybah-lang',l)}catch(e){}})});
+})();
+</script>
+</body>
+</html>
