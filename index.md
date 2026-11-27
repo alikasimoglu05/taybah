@@ -1,4 +1,4 @@
 ---
 layout: home
-title: Taybah — арабский язык по Мединскому курсу
+title: Taybah — Fusha Arabic A1–A2
 ---
