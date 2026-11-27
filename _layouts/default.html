@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script>(function(){var l='ru';try{l=localStorage.getItem('taybah-lang')||((navigator.language||'').slice(0,2)==='en'?'en':'ru')}catch(e){}document.documentElement.setAttribute('data-lang',l);document.documentElement.lang=l})();</script>
+<script>(function(){var supported=['ru','en','fr','tr'],l=(navigator.language||'en').slice(0,2);try{l=localStorage.getItem('taybah-lang')||l}catch(e){}if(supported.indexOf(l)<0)l='en';document.documentElement.setAttribute('data-lang',l);document.documentElement.lang=l})();</script>
 {% seo %}
 <meta name="theme-color" content="#EFE8D8" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#1C1513" media="(prefers-color-scheme: dark)">
@@ -21,10 +21,10 @@
       <img src="{{ '/assets/icon-180.jpg' | relative_url }}" alt="" width="40" height="40">
       <span class="wm">taybah</span><span class="wm-ar" lang="ar">طيبة</span>
     </a>
-    <div class="lang" role="group" aria-label="Язык / Language">
-      <span class="thumb" aria-hidden="true"></span>
+    <div class="lang" role="group" aria-label="Language">
+      
       <button type="button" data-set="ru">RU</button>
-      <button type="button" data-set="en">EN</button>
+      <button type="button" data-set="en">EN</button><button type="button" data-set="fr">FR</button><button type="button" data-set="tr">TR</button>
     </div>
   </div>
 </header>
@@ -34,8 +34,8 @@
 <footer class="foot">
   <div class="wrap foot-in">
     <nav>
-      <a href="{{ '/privacy/' | relative_url }}"><span class="l-ru">Конфиденциальность</span><span class="l-en">Privacy</span></a>
-      <a href="{{ '/support/' | relative_url }}"><span class="l-ru">Поддержка</span><span class="l-en">Support</span></a>
+      <a href="{{ '/privacy/' | relative_url }}"><span class="l-ru">Конфиденциальность</span><span class="l-en">Privacy</span><span class="l-fr">Confidentialité</span><span class="l-tr">Gizlilik</span></a>
+      <a href="{{ '/support/' | relative_url }}"><span class="l-ru">Поддержка</span><span class="l-en">Support</span><span class="l-fr">Assistance</span><span class="l-tr">Destek</span></a>
       <a href="mailto:alikasimoglu05@icloud.com">alikasimoglu05@icloud.com</a>
     </nav>
     <p>© 2026 Taybah</p>
