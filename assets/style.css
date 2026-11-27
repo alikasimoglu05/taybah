@@ -115,3 +115,8 @@ html[data-lang="tr"] .l-ru,html[data-lang="tr"] .l-en,html[data-lang="tr"] .l-fr
 .lang button[aria-pressed="true"]{background:var(--accent);color:white;border-radius:999px}
 
 .lang{grid-template-columns:repeat(4,1fr);flex-shrink:0}.lang button{padding:9px 8px;font-size:12px}.top-in{gap:12px}@media(max-width:380px){.wm-ar{display:none}.brand{gap:6px}}
+
+.shots{margin:36px 0 28px}
+.shots-row{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 2px 16px;-webkit-overflow-scrolling:touch;scrollbar-width:thin}
+.shots-row img{flex:none;width:220px;height:auto;border-radius:24px;scroll-snap-align:start;box-shadow:0 4px 0 var(--line)}
+@media (min-width:1100px){.shots-row img{width:calc((100% - 80px)/6)}}
