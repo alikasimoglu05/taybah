@@ -106,3 +106,12 @@ h1{margin:0 0 16px;font-weight:900;font-size:clamp(34px,5.4vw,56px);line-height:
   .doc{padding:4px 20px 20px}
   .wm-ar{display:none}
 }
+
+/* Four complete interface languages. */
+html[data-lang="ru"] .l-en,html[data-lang="ru"] .l-fr,html[data-lang="ru"] .l-tr{display:none!important}
+html[data-lang="en"] .l-ru,html[data-lang="en"] .l-fr,html[data-lang="en"] .l-tr{display:none!important}
+html[data-lang="fr"] .l-ru,html[data-lang="fr"] .l-en,html[data-lang="fr"] .l-tr{display:none!important}
+html[data-lang="tr"] .l-ru,html[data-lang="tr"] .l-en,html[data-lang="tr"] .l-fr{display:none!important}
+.lang button[aria-pressed="true"]{background:var(--accent);color:white;border-radius:999px}
+
+.lang{grid-template-columns:repeat(4,1fr);flex-shrink:0}.lang button{padding:9px 8px;font-size:12px}.top-in{gap:12px}@media(max-width:380px){.wm-ar{display:none}.brand{gap:6px}}
